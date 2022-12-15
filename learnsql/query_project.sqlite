@@ -1,0 +1,45 @@
+--select all from nomnom
+SELECT *
+FROM nomnom;
+
+--Select each neighborhoods only once and filter out duplicates from nomnom
+SELECT DISTINCT neighborhood
+FROM nomnom;
+
+--select each cuisines only once and filter out duplicates from nomnom
+SELECT DISTINCT cuisine
+FROM nomnom;
+
+--select all where cuisine is "Chinese" from nomnom
+SELECT *
+FROM nomnom
+WHERE cuisine = 'Chinese';
+
+--select all where review is equal or higher than 4 from nomnom
+SELECT *
+FROM nomnom
+WHERE review >= 4;
+
+--select all where cuisine is italian and price is $$$ from nomnom
+SELECT *
+FROM nomnom
+WHERE cuisine = 'Italian'
+   AND price = '$$$';
+
+--select all where name has meatball in the middle from nomnom
+SELECT *
+FROM nomnom
+WHERE name LIKE '%meatball%';
+
+--select all where neighborhood is either midtown downtown or chinatown from nomnom
+SELECT *
+FROM nomnom
+WHERE neighborhood = 'Midtown'
+   OR neighborhood = 'Downtown'
+   OR neighborhood = 'Chinatown'; 
+
+
+--select all from nomnom where health is null (empty)
+SELECT *
+FROM nomnom
+WHERE health IS NULL;

@@ -1,0 +1,43 @@
+--Create table "friends" keys: id as INTEGER, name as TEXT and birthday as DATE
+CREATE TABLE friends (
+   id INTEGER,
+   name TEXT,
+   birthday DATE
+);
+--Simple INSERT INTO statement inserting id name and birthday into table
+INSERT INTO friends (id, name, birthday) 
+VALUES (1, 'Ororo Munroe', '1940-05-30');
+
+--SELECT all from friends
+SELECT * 
+FROM friends;
+
+--another INSERT INTO statement, same as the one above
+INSERT INTO friends (id, name, birthday) 
+VALUES (2, 'BFF One', 'YYYY-MM-DD');
+ 
+--another INSERT INTO statement, same as the one above
+INSERT INTO friends (id, name, birthday) 
+VALUES (3, 'BFF Two', 'YYYY-MM-DD');
+
+--Update the name where id = 1
+UPDATE friends
+SET name = 'Storm'
+WHERE id = 1;
+
+--Add column email where type is text
+ALTER TABLE friends 
+ADD COLUMN email TEXT; 
+
+--update email where ID is 1
+UPDATE friends
+SET email = 'storm@codecademy.com'
+WHERE id = 1;
+
+--delete record where id is 1
+DELETE FROM friends
+WHERE id = 1;
+
+--select all from friends again
+SELECT * 
+FROM friends;
